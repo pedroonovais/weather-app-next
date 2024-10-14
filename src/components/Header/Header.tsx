@@ -29,10 +29,10 @@ export const Header = ({ title, userName }: HeaderProps) => {
                 {userName
                     ? (<>
                         <span>{userName}</span>
-                        <button onClick={handleLogout}>Sair</button>
+                        <button className={styles.button} onClick={handleLogout}>Sair</button>
                     </>)
                     : (
-                        <button onClick={handleLogin}>Login</button>
+                        <button className={styles.button} onClick={handleLogin}>Login</button>
                     )
                 }
             </div>
