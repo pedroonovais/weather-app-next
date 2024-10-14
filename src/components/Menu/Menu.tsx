@@ -16,7 +16,7 @@ export const Menu = () => {
                 </li>
                 <li className={styles.li}>
                     <BiHeart size="1.5rem" color="#38aede" />
-                    <Link className={styles.link} href={'#'}>Favoritos</Link>
+                    <Link className={styles.link} href={'/favoritos'}>Favoritos</Link>
                 </li>
                 <li className={styles.li}>
                     <BiUserCircle size="1.5rem" color="#38aede" />

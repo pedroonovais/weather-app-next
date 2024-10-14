@@ -1,5 +1,7 @@
 import styles from "./Header.module.css"
 import { useContext } from "react"
+import { useRouter } from "next/navigation";
+import UserContext from "@/context/UserContext";
 
 interface HeaderProps{
     title: string
@@ -7,17 +9,17 @@ interface HeaderProps{
 }
 
 export const Header = ({ title, userName }: HeaderProps) => {
-    //const navigate = useNavigate()
-    //const { setUserName } = useContext(UserContext)
+    const router = useRouter();
+    const { setUserName } = useContext(UserContext)
     
     const handleLogin = () => {
-    //    navigate('/login')
+        router.push('/login')
     }
 
     const handleLogout = () => {
         sessionStorage.removeItem("userToken")
-    //    setUserName(null)
-    //    navigate('/login')
+        setUserName(null)
+        router.push('/login')
     }
     
     return (

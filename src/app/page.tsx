@@ -3,8 +3,10 @@ import { Header } from "@/components/Header/Header";
 import UserContext from "@/context/UserContext";
 import { useContext, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { loadLoginState } from "@/helpers/loadLoginState";
 
 export default function Home() {
+  loadLoginState()
   const searchParams = useSearchParams();
   const state = searchParams.get("cityCode")
   const { userName } = useContext(UserContext)
