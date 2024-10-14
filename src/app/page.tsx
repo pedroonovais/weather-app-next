@@ -57,7 +57,7 @@ export default function Home() {
   useEffect(() => {
     // if (location.state === null) {
     if (!state) {
-      const inicialCity = "245";
+      const inicialCity = "244";
       loadCity(inicialCity);
       loadForecast(inicialCity)
       return;
