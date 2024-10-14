@@ -1,4 +1,5 @@
 import { Menu } from '@/components/Menu/Menu'
+import './globals.css'
 import styles from './layout.module.css'
 
 export const metadata = {
